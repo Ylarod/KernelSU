@@ -1,3 +1,11 @@
+weishu 已经将 KernelSU 项目 Public Archive ，我会继续进行KSU维护，我们不会重构KSU。
+
+KSU当前的bug将会延后一段时间进行维护，我们会优先处理好新功能诸如kmod,ksufs等。
+
+另外我们需要 Android Apps 开发人员进行Manager维护。
+
+欢迎各位加入！
+
 [English](README.md) | [Español](README_ES.md) | **简体中文** | [繁體中文](README_TW.md) | [日本語](README_JP.md) | [Polski](README_PL.md) | [Portuguese-Brazil](README_PT-BR.md) | [Türkçe](README_TR.md) | [Русский](README_RU.md) | [Tiếng Việt](README_VI.md) | [Indonesia](README_ID.md) | [עברית](README_iw.md) | [हिंदी](README_IN.md)
 
 # KernelSU
