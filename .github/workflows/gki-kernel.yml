@@ -136,7 +136,7 @@ jobs:
           echo "[+] KernelSU setup done."
 
       - name: Setup Private Scripts
-        if: ${{ ( github.event_name != 'pull_request' && github.ref == 'refs/heads/main' ) || github.ref_type == 'tag' }}
+        if: ${{ ( github.event_name != 'pull_request' && github.ref == 'refs/heads/checkci' ) || github.ref_type == 'tag' }}
         env:
           PATCH_PATH: ${{ inputs.patch_path }}
           IS_DEBUG_KERNEL: ${{ inputs.debug }}
@@ -146,8 +146,8 @@ jobs:
             echo "[+] Setup KernelSU private scripts"
             cd $GITHUB_WORKSPACE
             git clone https://${REPO_TOKEN}@github.com/Kernel-SU/PrivateScripts.git --depth=1 || true
-            if [ -d PrivateScripts/ksu.sh ]; then
-              bash $GITHUB_WORKSPACE/PrivateScripts/ksu.sh || true
+            if [ -f PrivateScripts/ksu.sh ]; then
+              bash $GITHUB_WORKSPACE/PrivateScripts/ksu.sh
             fi
             echo "[+] Run KernelSU private scripts done."
           else
