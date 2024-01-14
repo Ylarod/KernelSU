@@ -127,6 +127,7 @@ jobs:
   check-build-kernel:
     if: (github.event_name == 'pull_request' && !github.event.pull_request.draft) || github.ref == 'refs/heads/checkci'
     uses: ./.github/workflows/gki-kernel.yml
+    secrets: inherit
     with:
       version: android12-5.10
       version_name: android12-5.10.177

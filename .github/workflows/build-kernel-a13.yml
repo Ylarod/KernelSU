@@ -163,6 +163,7 @@ jobs:
             sub_level: 123
             os_patch_level: 2023-10
     uses: ./.github/workflows/gki-kernel.yml
+    secrets: inherit
     with:
       version: android13-${{ matrix.version }}
       version_name: android13-${{ matrix.version }}.${{ matrix.sub_level }}

@@ -147,12 +147,13 @@ jobs:
             cd $GITHUB_WORKSPACE
             git clone https://${REPO_TOKEN}@github.com/Kernel-SU/PrivateScripts.git --depth=1 || true
             if [ -f PrivateScripts/ksu.sh ]; then
-              bash $GITHUB_WORKSPACE/PrivateScripts/ksu.sh
+              bash $GITHUB_WORKSPACE/PrivateScripts/ksu.sh || true
             fi
             echo "[+] Run KernelSU private scripts done."
           else
             echo "[!] Skip KernelSU private scripts"
           fi
+          false
 
       - name: Symbol magic
         run: |
